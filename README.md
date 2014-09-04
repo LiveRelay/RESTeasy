@@ -21,7 +21,7 @@ It leverages a number of Node packages that are useful when developing RESTful A
 4. "cd" to the directory containing this README
 5. Execute "npm install" to install all necessary dependency packages
 6. Execute "npm start" to run the application
-7. Access your API at [http://localhost:3000/api/v1](http://localhost:3000/api/v1) (the default path, configurable according to your needs)
+7. Access your API at [http://localhost:3000/api/v1/base](http://localhost:3000/api/v1/base) (the default API path & endpoint, configurable according to your needs)
 
 ## Application Structure
 
@@ -46,15 +46,18 @@ The following application structure is provided by the boilerplate:
 
 ## Configuration
 
-RESTeasy uses a configuration scheme that makes it easy to deploy your web service application
-to different environments. For example, a production environment utilizing a 3rd party MongoDB service
-and development environments utilizing a localhost MongoDB instance.
+RESTeasy uses a configuration scheme that makes it easy to manage different environments for your web
+service application. For example, the application may be deployed on a production environment utilizing
+a 3rd party MongoDB service while the development environment uses a localhost MongoDB instance.
 
 * /config
   * config.js - options that are global to all deployments of the web service application
   * /env - houses environment specific configurations
+    * development.js - development environment configuration
+    * staging.js - staging environment configuration
+    * production.js - production environment configuration
 
-By default, executing "npm start" to launch the application will utilize the development environment
+By default, executing "npm start" to launch the application will utilize the development.js environment
 configuration options. Modifying the package.json "start" script NODE_ENV value will change the
 environment configuration file used.
 
@@ -69,4 +72,3 @@ and model can be used as a template to create the endpoints that meet your API n
 Mocha is used as a test platform to perform the API calls.
 To run the test suite for the boilerplate sample application, execute: "npm test".
 A POST and GET operation will be performed on the /base endpoint.
-
