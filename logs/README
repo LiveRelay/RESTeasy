@@ -1,0 +1,1 @@
+This directory holds Winston logs for the application in development environments. Log files themselves are set to be ignored by source control.

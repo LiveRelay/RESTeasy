@@ -1,0 +1,31 @@
+{
+  "name": "RESTeasy",
+  "version": "0.0.1",
+  "author": "Steven Shen",
+  "description": "RESTeasy",
+  "main": "server.js",
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/LiveRelay/RESTeasy.git"
+  },
+  "scripts": {
+    "start": "NODE_PATH=./config:./app/controllers NODE_ENV=development ./node_modules/.bin/nodemon server.js",
+    "test": "make test"
+  },
+  "dependencies": {
+    "body-parser": "^1.0.2",
+    "express": "^4.1.1",
+    "mocha": "^1.21.4",
+    "mongoose": "^3.8.8",
+    "should": "^4.0.4",
+    "supertest": "^0.13.0",
+    "winston": "^0.7.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.2.1"
+  }
+}
