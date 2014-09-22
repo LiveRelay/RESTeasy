@@ -66,13 +66,9 @@ router.route(controllerRoute + '/:id')
     });
   })
   .put(function (req, res) {
-    Base.findByIdAndUpdate(req.params.id, { $set: req.body }).exec(function (err, results) {
-      if (err) return res.status(404).end();
-
-      if (!results) return res.status(404).end();
-
-      res.status(200);
-      res.json(results);
+    Base.update({"_id": req.params.id}, req.body, function(err){
+        if (err) { return next(err); }
+        res.status(200).end();
     });
   })
   .delete(function (req, res) {
