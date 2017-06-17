@@ -7,7 +7,7 @@ RESTeasy provides an easily understandable file and folder structure following M
 It leverages a number of Node packages that are useful when developing RESTful APIs including:
 
 * [MongooseJS](http://mongoosejs.com/) for interfacing and validating data to be stored in MongoDB
-* [Mocha](http://visionmedia.github.io/mocha/) as a test framework
+* [Mocha](http://mochajs.org/) as a test framework
 * [Supertest](https://github.com/visionmedia/supertest) & [Should](https://github.com/visionmedia/should.js/) for simplifying API HTTP testing
 * [Winston](https://github.com/flatiron/winston) for logging of API calls and exceptions
 
